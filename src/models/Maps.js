@@ -26,6 +26,14 @@ const mapSchema = new Schema({
         type: String,
         required:true
     },
+    description:{
+        type: String,
+        required: true
+    },
+    recomendation:{
+        type: String,
+        required: true
+    },
     geometry: GeoSchema
 },{
     versionKey: false,

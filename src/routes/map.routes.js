@@ -1,5 +1,4 @@
 import {Router} from 'express';
-import Maps from '../models/Maps.js'
 import MapsController from '../controllers/MapController.js';
 
 const router = Router();

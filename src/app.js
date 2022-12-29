@@ -1,5 +1,7 @@
 import express from 'express';
-import indexRoutes from './routes/map.routes';
+import mapRoutes from './routes/map.routes';
+import userRoutes from './routes/user.routes';
+import authRoutes from './routes/auth.routes';
 import morgan from "morgan";
 import cors from 'cors';
 
@@ -16,6 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 //Routes
-app.use('/api/map',indexRoutes);
+app.use('/api/map',mapRoutes);
+app.use('/api/user',userRoutes);
+app.use('/api/auth',authRoutes);
 
 export default app;

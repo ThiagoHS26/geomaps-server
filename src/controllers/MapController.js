@@ -28,9 +28,8 @@ class MapsController {
                 features:markers
             });
         } catch (error) {
-            res.status(500)
-            .json({
-                message: error.message || "Something goes wrong retrieving markers!"
+            res.status(500).json({
+                message:"Something goes wrong retrieving markers!"
             });
         }
     }
@@ -47,7 +46,7 @@ class MapsController {
             });
         } catch (error) {
             res.status(500).json({
-                message: error.message || `Error retrieving a marker with id: ${id}`
+                message:`Error retrieving a marker with id: ${id}`
             });
         }
     }
