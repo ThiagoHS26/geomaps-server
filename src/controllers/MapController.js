@@ -7,6 +7,7 @@ class MapsController {
         const newMap = new Maps();
         newMap.name = data.name;
         newMap.state = data.state;
+        newMap.ica_dates = data.ica_dates;
         newMap.geometry = data.geometry;
         try {
             const markerSaved = await newMap.save();

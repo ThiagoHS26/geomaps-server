@@ -1,5 +1,16 @@
 import {Mongoose,model,Schema} from 'mongoose';
 
+//ICA dates
+const IcaSchema = new Schema({
+    carbon_monoxide:{type:Number,required:false},
+    nitrogen_dioxide:{type:Number,required:false},
+    ozone:{type:Number,required:false},
+    hidrogen_sulfide:{type:Number,required:false},
+    sulfur_dioxide:{type:Number,required:false},
+    pm_25:{type:Number,required:false},
+    pm_10:{type:Number,required:false}
+});
+
 //geolocation Schema
 const GeoSchema = new Schema({
     type:{
@@ -26,14 +37,7 @@ const mapSchema = new Schema({
         type: String,
         required:true
     },
-    description:{
-        type: String,
-        required: true
-    },
-    recomendation:{
-        type: String,
-        required: true
-    },
+    ica_dates: IcaSchema,
     geometry: GeoSchema
 },{
     versionKey: false,
