@@ -21,6 +21,24 @@ class MapsController {
         }
     }
 
+    //Insert excel data 
+
+    static excelData = async(req,res)=>{
+        const data = req.body;
+
+        console.log(data);
+        Maps.insertMany(req.body).then((datos)=>{
+            res.status(201).json({
+                datos,
+                message:'Exit!'
+            })
+        }).catch((error)=>{
+            res.status(400).json({
+                error
+            });
+        })
+    }
+
     //Get all data
     static getAllMarkers = async(req,res)=>{
         try {

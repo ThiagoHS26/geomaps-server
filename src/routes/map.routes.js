@@ -12,6 +12,9 @@ router.get('/marker/:id',MapsController.getById);
 //New marker 
 router.post('/marker/register',MapsController.newMarker);
 
+//Excel data
+router.post('/marker/register-excel',MapsController.excelData);
+
 //Delete marker
 router.delete('/marker/delete/:id',MapsController.deleteByID);
 
